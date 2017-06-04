@@ -15,6 +15,10 @@ module Megaman
       json_request[0]
     end
 
+    def constant_name
+      body['constant_name']
+    end
+
     private
 
     def json_request

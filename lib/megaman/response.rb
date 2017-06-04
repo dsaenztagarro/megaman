@@ -2,9 +2,9 @@ require 'json'
 
 module Megaman
   class Response
-    def initialize(request, response_body)
+    def initialize(request, message)
       @request = request
-      @response_body = response_body
+      @message = message
     end
 
     def to_s
@@ -14,7 +14,7 @@ module Megaman
     private
 
     def value
-      [@request.number, @response_body.to_json]
+      [@request.number, @message.to_json]
     end
   end
 end

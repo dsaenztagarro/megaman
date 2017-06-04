@@ -1,6 +1,8 @@
 require 'socket'
 require 'json'
 
+Dir.glob(File.expand_path "../lib/**/*.rb", __FILE__).each { |file| load file }
+
 require_relative 'lib/megaman'
 
 port = 5000
